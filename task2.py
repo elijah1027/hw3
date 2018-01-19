@@ -4,9 +4,6 @@ import time
 import re
 import operator
 
-# questions about yield?
-# See https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
-
 
 class MRWordCounter(MRJob):
     def steps(self):
