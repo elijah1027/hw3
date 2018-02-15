@@ -17,7 +17,8 @@ class MRWordCounter(MRJob):
         line_split = re.compile(r"[A-Za-z]+").findall(line)
         for word in line_split:
             yield word,1            
-            
+    #reference from Mrjob tutorial(multi-step-job)
+    #https://pythonhosted.org/mrjob/guides/writing-mrjobs.html         
     def reducer_step1(self, word, counts):
         yield None, (sum(counts),word)
     
